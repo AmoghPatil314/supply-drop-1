@@ -28,15 +28,6 @@ function setup() {
 	groundSprite=createSprite(width/2, height-5, width,10);   //ground sprite
 	groundSprite.shapeColor="white";
 
-	wall1Sprite=createSprite(200,500,25,200);
-	wall1Sprite.shapeColor=color(255,0,0);
-	
-	wall2Sprite=createSprite(600,500,25,200);
-	wall2Sprite.shapeColor=color(255,0,0);
-	
-	wall3Sprite=createSprite(400,600,400,25);
-	wall3Sprite.shapeColor=color(255,0,0);
-
 	engine = Engine.create();
 	world = engine.world;
 
@@ -48,15 +39,6 @@ function setup() {
 	//Create a Ground- physical body for the ground
 	ground = Bodies.rectangle(width/2, height-5, width, 10 , {isStatic:true} );
 	World.add(world, ground);
-	 
-	wall1Body = Bodies.rectangle(wall1Sprite.x, wall1Sprite.y, wall1Sprite.width, wall1Sprite.height , {isStatic:true} );
-	World.add(world, wall1Body);
-	 
-	wall2Body = Bodies.rectangle(wall2Sprite.x, wall2Sprite.y, wall2Sprite.width, wall2Sprite.height , {isStatic:true} );
-	World.add(world, wall2Body);
-	 
-	wall3Body = Bodies.rectangle(wall3Sprite.x, wall3Sprite.y, wall3Sprite.width, wall3Sprite.height , {isStatic:true} );
- 	World.add(world, wall3Body);
 
 	Engine.run(engine);
 
